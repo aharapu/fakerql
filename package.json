@@ -10,7 +10,7 @@
     "playground": "graphql playground",
     "deploy": "now --public --dotenv .env.production && now alias && now rm --yes --safe fakerql.com",
     "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false",
-    "build": "rimraf dist && tsc",
+    "build": "node ./node_modules/rimraf/bin.js dist && tsc",
     "now-start": "node dist",
     "rimraf": "./node_modules/rimraf/bin.js"
   },
