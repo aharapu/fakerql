@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel start playground",
     "start": "nodemon -e ts,graphql -x ts-node -r dotenv/config src",
+    "build": "tsc",
     "playground": "graphql playground",
     "deploy": "now --public --dotenv .env.production && now alias && now rm --yes --safe fakerql.com",
     "now-start": "node dist"
